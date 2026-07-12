@@ -8,11 +8,13 @@ public class Quick {
 		}
 	}
 	static void quickSort(int arr[], int si, int ei){
-		if (si<ei) {
+		if (si>=ei){
+			return ;
+		}
 			int pi = partition(arr, si, ei);
 			quickSort(arr,si,pi-1);
 			quickSort(arr,pi+1,ei);
-		}			
+				
 	}
 		
 	static int partition(int arr[], int si, int ei){
